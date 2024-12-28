@@ -80,22 +80,22 @@ The overtraining check demonstrates that the decision tree generalizes well, sho
 ## 4. Visual Analysis
 
 ### Visual 1: Scatter Plot for Decision Stump Cut
-![Scatter Plot]()
+![Scatter Plot](plots/data_cut.png)
 - **Description:** This plot illustrates the scatter distribution of the `detajj` and `massjj` features with the optimal decision stump cut line overlayed.
 - **Analysis:** The threshold of 220 GeV effectively separates signal and background, as evident from the clustering of points on either side of the cut.
 
 ### Visual 2: Overtraining Check for Decision Tree
-![Overtraining Plot]()
+![Overtraining Plot](plots/overtrain.png)
 - **Description:** This plot shows the predicted probabilities for the decision tree classifier (max depth=2) for both training and testing datasets.
 - **Analysis:** The classifier exhibits good generalization, with overlapping distributions for training and testing, indicating minimal overfitting.
 
 ### Visual 3: Overtraining Check for Random Forest (Default)
-![Overtraining Plot Random Forest]()
+![Overtraining Plot Random Forest](plots/oc100.png)
 - **Description:** This histogram and error plot display the performance of a random forest classifier with 100 estimators and default parameters.
 - **Analysis:** The model severely overfits, as evidenced by a sharp disparity between the training and testing set performance. The test set predictions lack meaningful separation.
 
 ### Visual 4: Overtraining Check for Random Forest (Optimized)
-![Overtraining Plot Random Forest 32 Max leaf node]()
+![Overtraining Plot Random Forest 32 Max leaf node](plots/oc32maxleaf.png)
 - **Description:** Similar to Visual 3 but with a random forest constrained to a maximum of 32 leaf nodes.
 - **Analysis:** The optimized parameters significantly reduce overfitting, with improved consistency between training and testing performance and better generalization.
 
